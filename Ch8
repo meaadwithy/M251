@@ -12,3 +12,25 @@ public class Ch8 {
         //to be ordered
     }
 }
+public class Ch8 {
+    public static void main(String[]args){
+        String txt = "Good morning. Have a good class. "+"Have a good visit. Have fun!";
+        Map <String,Integer> map = new TreeMap<String,Integer>();
+        String[] words = txt.split("\\W+");
+        for(int i = 0; i < words.length;i++){
+            String key = words[i].toLowerCase();
+
+            System.out.println(key);
+
+            if(!map.containsKey(key)) {
+                map.put(key, 1);
+            }else{
+                int value =map.get(key);
+                value++;
+                map.put(key,value);
+            }
+        }
+        //for(String x : map.keySet())
+            System.out.println(map);
+    }
+}
