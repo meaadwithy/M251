@@ -7,5 +7,8 @@ public class Ch8 {
         for(String x: map.keySet()){
             System.out.println(map.get(x));
         }
+        Map <String,Integer> tree = new TreeMap<String,Integer>(map);
+        System.out.println(tree);
+        //to be ordered
     }
 }
