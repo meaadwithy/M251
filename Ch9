@@ -5,11 +5,18 @@ public class Ch9 {
         System.out.println("Enter a non-negative number: ");
         int num = s.nextInt();
         System.out.println("The factorial of " + num +" = " + factorial(num));
+        System.out.println("The addition of factorial " + num +" = " + addition(num));
     }
     public static int factorial(int n){
         if (n == 0)
          return 1;
         else
             return n * factorial(n -1);
+    }
+    public static int addition(int n){
+        if (n == 0)
+            return 0;
+        else
+            return n + addition(n-1);
     }
 }
