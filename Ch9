@@ -1,0 +1,15 @@
+import java.util.*;
+public class Ch9 {
+    public static void main(String[]args){
+        Scanner s = new Scanner (System.in);
+        System.out.println("Enter a non-negative number: ");
+        int num = s.nextInt();
+        System.out.println("The factorial of " + num +" = " + factorial(num));
+    }
+    public static int factorial(int n){
+        if (n == 0)
+         return 1;
+        else
+            return n * factorial(n -1);
+    }
+}
