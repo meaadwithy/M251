@@ -6,6 +6,9 @@ public class Ch9 {
         int num = s.nextInt();
         System.out.println("The factorial of " + num +" = " + factorial(num));
         System.out.println("The addition of factorial " + num +" = " + addition(num));
+        System.out.println("Enter a non-negative number for the index ");
+        int index = s.nextInt();
+        System.out.println("The fibonacci of index "+ index + " = " + fibonacci(index));
     }
     public static int factorial(int n){
         if (n == 0)
@@ -18,5 +21,13 @@ public class Ch9 {
             return 0;
         else
             return n + addition(n-1);
+    }
+    public static int fibonacci(int n){
+        if (n == 0)
+            return 0;
+        else if (n == 1)
+            return 1;
+        else
+            return fibonacci(n-1) + fibonacci(n -2);
     }
 }
