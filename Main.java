@@ -1,16 +1,17 @@
-package Ex7;
-
-import java.util.*;
-
-import static Ex7.Deal_Rectangles.*;
+package sater;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Rectangle> list = new ArrayList<Rectangle>();
-        fillRectangles(list);
-        writeToFile(list);
-        ArrayList<Rectangle> list1 = readFromFile();
-        System.out.println(readFromFile());
-        printArea(list1);
+        Garage garage = new Garage();
+        Car car = new Car("Toyota", "Japan",2022, 5);
+        Bike bike = new Bike("Yamaha", "Japan",2021,  600);
+        Truck truck = new Truck("Volvo", "Sweden",2020,  18);
+
+
+        garage.addV(car);
+        garage.addV(bike);
+        garage.addV(truck);
+
+        garage.printAll();
     }
 }
